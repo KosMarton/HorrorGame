@@ -67,8 +67,8 @@ public class LightSettingsPlayer : MonoBehaviour
             NightVisionOverlay.gameObject.SetActive(false);
             SaveScript.NVLightOn = false;
             FlashLightActive = false;
-            FlashLight.gameObject.SetActive(true);
-            SaveScript.FlashLightOn = true;
+            FlashLight.gameObject.SetActive(false);
+            SaveScript.FlashLightOn = false;
         }
     }
 }

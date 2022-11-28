@@ -13,6 +13,11 @@ public class BatteryPower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SaveScript.BatteryRefill)
+        {
+            SaveScript.BatteryRefill = false;
+            BatteryUI.fillAmount = 1.0f;
+        }
         if (SaveScript.FlashLightOn || SaveScript.NVLightOn)
         {
             BatteryUI.fillAmount -= 1.0f / DrainTime * Time.deltaTime;
